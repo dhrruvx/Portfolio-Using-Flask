@@ -1,6 +1,6 @@
 from flask import Flask, render_template,request, redirect, url_for
 app=Flask(__name__)
-ledger=[]
+lg=[]
 @app.route('/')
 def main_page():
     #return "Hello World!"
@@ -23,7 +23,7 @@ def ledger_add():
             'total_cost': request.form['total_cost'],
             'opinion': request.form['opinion']
         }
-        ledger.append(trip)  # Append to the "ledger" list
+        lg.append(trip)  # Append to the "ledger" list
         # Redirect to ledger_view route after adding trip
         #return redirect(url_for('ledger_view'))
     return render_template('ledger_add.html')
@@ -32,6 +32,6 @@ def ledger_add():
 
 @app.route('/ledger_view')
 def ledger_view():
-    return render_template('ledger_view.html', trips=ledger)  # Pass trips stored in the ledger list to the template
+    return render_template('ledger_view.html', trips=lg)  # Pass trips stored in the ledger list to the template
 if __name__=="__main__":
     app.run(debug=True,port=7000)
