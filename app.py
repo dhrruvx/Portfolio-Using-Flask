@@ -20,8 +20,7 @@ def ledger_add():
             'trip_start_date': request.form['trip_start_date'],
             'trip_end_date': request.form['trip_end_date'],
             'places_visited': request.form['places_visited'],
-            'total_cost': request.form['total_cost'],
-            'opinion': request.form['opinion']
+            'total_cost': request.form['total_cost']
         }
         lg.append(trip)  # Append to the "ledger" list
         # Redirect to ledger_view route after adding trip
