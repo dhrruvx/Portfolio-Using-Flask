@@ -8,7 +8,8 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #bae8e8;
+            font-family:Copperplate;
+            background-color: #A8CD9F;
             color: #272343;
         }
         .heading-center {
@@ -47,11 +48,13 @@
                 <label for="total_cost">Total Cost:</label>
                 <input type="text" class="form-control" name="total_cost" id="total_cost">
             </div>
-            <button type="submit" class="btn btn-primary">Add Trip</button>
+            <button type="submit" class="btn btn-primary" id="liveToastBtn">Add Trip</button>
         </form>
+        
         <!-- Link to the ledger -->
         <a href="{{ url_for('ledger_view') }}" class="btn btn-secondary mt-3">View Ledger</a>
     </div>
+
     <!-- Bootstrap JS (optional) -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
